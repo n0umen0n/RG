@@ -1,0 +1,312 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_contributionsContractAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "communityId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "weekNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "groupId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "consensusRanking",
+						"type": "uint256[]"
+					}
+				],
+				"name": "ConsensusReached",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "DebugLog",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "communityId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "weekNumber",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "groupId",
+						"type": "uint256"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "submitter",
+						"type": "address"
+					}
+				],
+				"name": "RankingSubmitted",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "contributionsContract",
+				"outputs": [
+					{
+						"internalType": "contract ICommunityGovernanceContributions",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_groupId",
+						"type": "uint256"
+					}
+				],
+				"name": "determineConsensus",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_groupId",
+						"type": "uint256"
+					}
+				],
+				"name": "getConsensusRanking",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "rankedScores",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "transientScores",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "timestamp",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_groupId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_user",
+						"type": "address"
+					}
+				],
+				"name": "getRanking",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_groupId",
+						"type": "uint256"
+					}
+				],
+				"name": "getTransientScores",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_groupId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256[]",
+						"name": "_ranking",
+						"type": "uint256[]"
+					}
+				],
+				"name": "submitRanking",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"custom:dev-run-script": "/script/threetogether.js",
+			"details": "Manages community creation, membership, and contributions",
+			"kind": "dev",
+			"methods": {},
+			"title": "CommunityGovernance",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/rankandconsensus.sol": "CommunityGovernanceRankings"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/rankandconsensus.sol": {
+			"keccak256": "0x3d3598f8ffc8b87b30a0343e32121fe086a0225d28c3f8422e61a61f85542ccd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29af3ff2930b88b9e876f6ed86e90c3595de997976380c12e4a6092e73a2a614",
+				"dweb:/ipfs/QmUfNscdMyFQQr8j5gYDR1yTFzjxhjn67ef3ekwbxRELG1"
+			]
+		}
+	},
+	"version": 1
+}

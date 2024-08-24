@@ -1,0 +1,77 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_communityId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_weekNumber",
+						"type": "uint256"
+					}
+				],
+				"name": "getGroupsForWeek",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address[]",
+								"name": "members",
+								"type": "address[]"
+							}
+						],
+						"internalType": "struct ICommunityGovernanceContributions.Group[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/rankandconsensus.sol": "ICommunityGovernanceContributions"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/rankandconsensus.sol": {
+			"keccak256": "0x3d3598f8ffc8b87b30a0343e32121fe086a0225d28c3f8422e61a61f85542ccd",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://29af3ff2930b88b9e876f6ed86e90c3595de997976380c12e4a6092e73a2a614",
+				"dweb:/ipfs/QmUfNscdMyFQQr8j5gYDR1yTFzjxhjn67ef3ekwbxRELG1"
+			]
+		}
+	},
+	"version": 1
+}
